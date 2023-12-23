@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Cookie Policy Automation",
+    "version": "1.0.0",
+    "description": "Automates cookie policy actions based on user preferences.",
+    "author": "Lorenzo Porcelli",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
